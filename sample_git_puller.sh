@@ -8,5 +8,5 @@ echo -e ""
 case $outp in
   y|Y) date; git pull ;;
   n|N) echo -e "Please go on Captain!" ;;
-  *)   echo -e "Wrong input, pulling for good measure"; date; git pull ;;
+  *)   echo -e "Wrong input, fetching for good measure"; date; git fetch ;;
 esac
