@@ -10,4 +10,9 @@ username=$1
 server=$2
 pub_key=$3
 
-ssh $1@$2 "echo \"`cat $3`\" >> ~/.ssh/authorized_keys"
+#ssh $1@$2 "mkdir ~/.ssh"
+#ssh $1@$2 "echo \"`cat $3`\" >> ~/.ssh/authorized_keys"
+ssh $1@$2 << EOF
+    mkdir ~/.ssh
+    echo `cat $3` >> ~/.ssh/authorized_keys
+EOF
